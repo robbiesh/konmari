@@ -1437,6 +1437,7 @@ a {
   right: 0;
   z-index: 5;
   max-width: 95%;
+  overflow: hidden;
 }
 @media only screen and (max-width: 480px) {
   .splash .splash-bg {

@@ -96,6 +96,7 @@ a {
     right: 0;
     z-index: 5;
     max-width: 95%;
+    overflow: hidden;
 
     @include media-query($small) {
       max-width: 99%;
