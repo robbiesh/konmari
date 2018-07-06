@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="712px" height="571px" viewBox="0 0 712 571" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>366D2DE1-1B12-4952-B3D0-714CB5717C72</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="760" height="838"></rect>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D_01_SplashPage" transform="translate(-728.000000, -453.000000)">
+            <g id="Group-30" transform="translate(680.000000, 380.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Rectangle-13"></g>
+                <g id="Group-16" mask="url(#mask-2)">
+                    <g transform="translate(484.496915, 519.802001) scale(1, -1) rotate(-315.000000) translate(-484.496915, -519.802001) translate(-104.503085, -105.697999)" id="Group-7">
+                        <g transform="translate(0.074639, 0.672619)">
+                            <path d="M728.356749,873.105561 L850.420482,995.169294 L596.491554,1249.09822 L0.0287600288,652.635427 L253.957688,398.7065 L280.125594,424.874406 L545,160 L705.357802,320.357802 C871.752177,154.753005 1026.01894,1.38385937 1025.55932,0.924232448 C1226.2065,201.571421 1226.41918,526.672109 1026.03435,727.056944 C942.472919,810.618372 837.224282,859.297305 728.356749,873.105561 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

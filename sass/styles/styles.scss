@@ -1,0 +1,305 @@
+@font-face {
+    font-family: 'Columbia Sans';
+    src: url('../fonts/ColumbiaSans-ExtraLight.eot');
+    src: url('../fonts/ColumbiaSans-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ColumbiaSans-ExtraLight.woff2') format('woff2'),
+        url('../fonts/ColumbiaSans-ExtraLight.woff') format('woff'),
+        url('../fonts/ColumbiaSans-ExtraLight.ttf') format('truetype'),
+        url('../fonts/ColumbiaSans-ExtraLight.svg#ColumbiaSans-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Columbia Sans';
+    src: url('../fonts/ColumbiaSans-Regular.eot');
+    src: url('../fonts/ColumbiaSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ColumbiaSans-Regular.woff2') format('woff2'),
+        url('../fonts/ColumbiaSans-Regular.woff') format('woff'),
+        url('../fonts/ColumbiaSans-Regular.ttf') format('truetype'),
+        url('../fonts/ColumbiaSans-Regular.svg#ColumbiaSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plantin';
+    src: url('../fonts/PlantinMTW05-LightItalic.eot');
+    src: url('../fonts/PlantinMTW05-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlantinMTW05-LightItalic.woff2') format('woff2'),
+        url('../fonts/PlantinMTW05-LightItalic.woff') format('woff'),
+        url('../fonts/PlantinMTW05-LightItalic.ttf') format('truetype'),
+        url('../fonts/PlantinMTW05-LightItalic.svg#PlantinMTW05-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Plantin';
+    src: url('../fonts/PlantinMTW05-Light.eot');
+    src: url('../fonts/PlantinMTW05-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlantinMTW05-Light.woff2') format('woff2'),
+        url('../fonts/PlantinMTW05-Light.woff') format('woff'),
+        url('../fonts/PlantinMTW05-Light.ttf') format('truetype'),
+        url('../fonts/PlantinMTW05-Light.svg#PlantinMTW05-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+body {
+  font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #747474;
+}
+
+// splash
+
+.splash {
+
+  .splash-container {
+    background-color: #faf5ea;
+    background-image: url("../images/splash-bg.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 45%;
+
+    @include media-query($large) {
+      height: 100vh;
+    }
+
+    @include media-query($medium) {
+      background-size: 90%;
+      min-height: 100vh;
+    }
+
+    @include media-query($small) {
+      background-size: 95%;
+      min-height: 100vh;
+    }
+  }
+
+  .splash-inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-query($large) {
+      height: 100%;
+      align-items: center;
+    }
+
+    @include media-query($medium-down) {
+      flex-direction: column-reverse;
+      margin-bottom: 50px;
+    }
+
+    @include media-query($medium) {
+      max-width: 436px;
+    }
+
+  }
+
+  .splash-title {
+    margin-bottom: 25px;
+
+    h1 {
+      font-family: 'Columbia Sans';
+      font-weight: normal;
+      font-size: 36px;
+      font-style: normal;
+      line-height: 1.11;
+      letter-spacing: normal;
+      color: rgba(0, 0, 0, 0.71);
+    }
+  }
+
+  .splash-content, .splash-image {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .splash-image {
+    > div {
+      display: inline-block;
+      position: relative;
+
+      &:after {
+        content: "";
+        background-image: url("../images/mark.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        right: -44px;
+        transform: translateY(-50%);
+        width: 88px;
+        height: 214px;
+
+        @include media-query($small) {
+          width: 48px;
+          height: 115px;
+          right: -25px;
+        }
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      @include media-query($medium-down) {
+        max-width: calc(100% - 24px);
+      }
+    }
+
+    @include media-query($large) {
+      text-align: center;
+    }
+
+    @include media-query($medium-down) {
+      padding: 0 0 50px;
+    }
+  }
+
+  .splash-content {
+    > div {
+      width: 450px;
+      max-width: 100%;
+    }
+
+    @include media-query($small) {
+      padding: 0;
+    }
+  }
+
+  .splash-body {
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 40px;
+
+    &:before {
+      height: 1px;
+      width: 27px;
+      background-color: black;
+      top: 15px;
+      left: 0;
+      position: absolute;
+      content: "";
+    }
+
+    p {
+      font-family: 'Plantin';
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.35;
+      color: rgba(0, 0, 0, 0.71);
+    }
+  }
+
+  .splash-meta {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 2.7px;
+    color: rgba(0, 0, 0, 0.71);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .splash-form {
+    form {
+      display: flex;
+      align-items: stretch;
+      border-bottom: solid 2px #0a121c;
+
+      input {
+        flex: 1;
+        background: none;
+        border: 0;
+        padding: 12px;
+        font-size: 18px;
+        font-weight: 300;
+        font-style: italic;
+        line-height: 1.22;
+        color: #0a121c;
+        border-right: 2px solid #0a121c;
+        border-radius: 0;
+        outline: none;
+        font-family: 'Plantin';
+      }
+
+      button {
+        padding: 0 20px;
+        outline: none;
+        font-size: 12px;
+        line-height: 1.5;
+        letter-spacing: 2.7px;
+        color: rgba(0, 0, 0, 0.71);
+        text-transform: uppercase;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .site-header {
+    width: 100%;
+
+    @include media-query($large) {
+      padding: 70px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    @include media-query($medium-down) {
+      position: relative;
+      padding: 55px 0;
+    }
+  }
+
+  .site-header-link {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    letter-spacing: 1.8px;
+    color: #4a4a4a;
+    text-transform: uppercase;
+
+    a {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        height: 1px;
+        background-color: #0a121c;
+        width: 100%;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .main-content {
+    height: 100%;
+    margin: auto;
+    padding: 30px;
+    box-sizing: border-box;
+
+    @include media-query($medium-down) {
+      padding: 0 50px;
+    }
+
+    @include media-query($small) {
+      padding: 0 20px;
+    }
+  }
+}
