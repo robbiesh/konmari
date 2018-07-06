@@ -363,7 +363,9 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
     }
 }
 
-
+#{$class-type}grid--middle {
+    align-items: center;
+}
 
 
 
@@ -759,9 +761,11 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
 }
 
 .wrapper {
-  max-width: 1180px;
+  width: 1180px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 30px;
+  box-sizing: border-box;
 
   @include media-query ($small) {
     padding: 0 15px;
