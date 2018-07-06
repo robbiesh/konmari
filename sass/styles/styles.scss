@@ -59,13 +59,21 @@ a {
 // splash
 
 .splash {
+  overflow: hidden;
+
+  header {
+    z-index: 15;
+  }
+
+  main {
+    z-index: 10;
+    position: relative;
+  }
 
   .splash-container {
     background-color: #faf5ea;
-    background-image: url("../images/splash-bg.svg");
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 45%;
+    position: relative;
+    // overflow: hidden;
 
     @include media-query($large) {
       height: 100vh;
@@ -79,6 +87,18 @@ a {
     @include media-query($small) {
       background-size: 95%;
       min-height: 100vh;
+    }
+  }
+
+  .splash-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    max-width: 95%;
+
+    @include media-query($small) {
+      max-width: 99%;
     }
   }
 
@@ -274,6 +294,7 @@ a {
 
     a {
       position: relative;
+      transition: 0.3s all;
 
       &:after {
         content: "";
@@ -285,6 +306,10 @@ a {
         left: 0;
         right: 0;
       }
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 
@@ -295,11 +320,11 @@ a {
     box-sizing: border-box;
 
     @include media-query($medium-down) {
-      padding: 0 50px;
+      padding: 0 100px 50px;
     }
 
     @include media-query($small) {
-      padding: 0 20px;
+      padding: 0 20px 50px;
     }
   }
 }
