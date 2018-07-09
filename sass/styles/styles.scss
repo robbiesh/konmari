@@ -76,7 +76,7 @@ a {
     // overflow: hidden;
 
     @include media-query($large) {
-      height: 100vh;
+      min-height: 100vh;
     }
 
     @include media-query($medium) {
