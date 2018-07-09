@@ -766,6 +766,7 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
   margin: 0 auto;
   padding: 0 30px;
   box-sizing: border-box;
+  position: relative;
 
   @include media-query ($small) {
     padding: 0 15px;

@@ -1359,6 +1359,7 @@ template {
   padding: 0 30px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  position: relative;
 }
 @media only screen and (max-width: 480px) {
   .wrapper {
@@ -1473,10 +1474,10 @@ a {
     max-width: 436px;
   }
 }
-.splash .splash-title {
+.splash .splash-title, .splash .invader-title {
   margin-bottom: 25px;
 }
-.splash .splash-title h1 {
+.splash .splash-title h1, .splash .invader-title h1 {
   font-family: 'Columbia Sans';
   font-weight: normal;
   font-size: 36px;
@@ -1484,6 +1485,12 @@ a {
   line-height: 1.11;
   letter-spacing: normal;
   color: rgba(0, 0, 0, 0.71);
+}
+@media only screen and (max-width: 768px) {
+  .splash .splash-title h1, .splash .invader-title h1 {
+    font-size: 28px;
+    line-height: 1.43;
+  }
 }
 .splash .splash-content, .splash .splash-image {
   padding: 20px;
@@ -1563,7 +1570,17 @@ a {
   line-height: 1.35;
   color: rgba(0, 0, 0, 0.71);
 }
-.splash .splash-meta {
+.splash .invader-body {
+  margin-bottom: 40px;
+}
+.splash .invader-body p {
+  font-family: 'Plantin';
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.35;
+  color: rgba(0, 0, 0, 0.71);
+}
+.splash .splash-meta, .splash .invader-meta {
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 2.7px;
@@ -1571,7 +1588,7 @@ a {
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-.splash .splash-form form {
+.splash .splash-form form, .splash .invader-form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1580,7 +1597,7 @@ a {
   align-items: stretch;
   border-bottom: solid 2px #0a121c;
 }
-.splash .splash-form form input[type="email"] {
+.splash .splash-form form input[type="email"], .splash .invader-form form input[type="email"] {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1597,7 +1614,19 @@ a {
   outline: none;
   font-family: 'Plantin';
 }
-.splash .splash-form form input[type="submit"] {
+.splash .splash-form form input[type="email"]::-webkit-input-placeholder, .splash .invader-form form input[type="email"]::-webkit-input-placeholder {
+  color: #0a121c;
+}
+.splash .splash-form form input[type="email"]::-moz-placeholder, .splash .invader-form form input[type="email"]::-moz-placeholder {
+  color: #0a121c;
+}
+.splash .splash-form form input[type="email"]:-ms-input-placeholder, .splash .invader-form form input[type="email"]:-ms-input-placeholder {
+  color: #0a121c;
+}
+.splash .splash-form form input[type="email"]:-moz-placeholder, .splash .invader-form form input[type="email"]:-moz-placeholder {
+  color: #0a121c;
+}
+.splash .splash-form form input[type="submit"], .splash .invader-form form input[type="submit"] {
   padding: 0 20px;
   outline: none;
   font-size: 12px;
@@ -1611,7 +1640,7 @@ a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.splash .splash-form form input[type="submit"]:hover {
+.splash .splash-form form input[type="submit"]:hover, .splash .invader-form form input[type="submit"]:hover {
   color: #dbaa66;
 }
 .splash .site-header {
@@ -1674,12 +1703,48 @@ a {
 }
 @media only screen and (max-width: 768px) {
   .splash .main-content {
-    padding: 0 100px 50px;
+    padding: 0 100px 30px;
     min-height: calc(100% - 120px);
   }
 }
 @media only screen and (max-width: 480px) {
   .splash .main-content {
     padding: 0 15px 50px;
+  }
+}
+.invader {
+  position: fixed;
+  bottom: -2000px;
+  left: 0;
+  right: 0;
+  padding: 70px 0;
+  z-index: 100;
+  background: white;
+  border-top: 2px solid #0a121c;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+@media only screen and (max-width: 768px) {
+  .invader {
+    padding: 40px 0;
+  }
+}
+.invader--open {
+  bottom: 0;
+}
+.invader-container {
+  max-width: 500px;
+  text-align: center;
+  margin: auto;
+}
+.invader-close {
+  position: absolute;
+  top: -40px;
+  left: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .invader-close {
+    top: -15px;
+    left: 20px;
   }
 }
