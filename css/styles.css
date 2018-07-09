@@ -1757,3 +1757,7 @@ a {
     left: 20px;
   }
 }
+.delay {
+  -webkit-animation-delay: 1s !important;
+  animation-delay: 1s !important;
+}
