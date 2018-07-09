@@ -1580,7 +1580,7 @@ a {
   align-items: stretch;
   border-bottom: solid 2px #0a121c;
 }
-.splash .splash-form form input {
+.splash .splash-form form input[type="email"] {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1597,7 +1597,7 @@ a {
   outline: none;
   font-family: 'Plantin';
 }
-.splash .splash-form form button {
+.splash .splash-form form input[type="submit"] {
   padding: 0 20px;
   outline: none;
   font-size: 12px;
@@ -1611,7 +1611,7 @@ a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.splash .splash-form form button:hover {
+.splash .splash-form form input[type="submit"]:hover {
   color: #dbaa66;
 }
 .splash .site-header {

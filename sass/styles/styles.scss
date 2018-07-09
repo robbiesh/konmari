@@ -235,7 +235,7 @@ a {
       align-items: stretch;
       border-bottom: solid 2px #0a121c;
 
-      input {
+      input[type="email"] {
         flex: 1;
         background: none;
         border: 0;
@@ -251,7 +251,7 @@ a {
         font-family: 'Plantin';
       }
 
-      button {
+      input[type="submit"] {
         padding: 0 20px;
         outline: none;
         font-size: 12px;
