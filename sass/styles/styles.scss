@@ -159,7 +159,7 @@
   transition: all 0.3s;
   opacity: 1;
   padding-right: 17px;
-  box-sizing: initial;
+  box-sizing: content-box;
 
   a {
     text-decoration: none;
