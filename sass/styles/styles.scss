@@ -158,8 +158,12 @@
   z-index: 50;
   transition: all 0.3s;
   opacity: 1;
-  padding-right: 17px;
-  box-sizing: content-box;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  // padding-right: 17px;
+  // box-sizing: content-box;
 
   a {
     text-decoration: none;
