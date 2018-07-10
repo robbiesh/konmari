@@ -8,8 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <link rel="stylesheet" href="css/animate.css?v=1.0">
+  <link rel="stylesheet" href="css/splash.css?v=1.0">
 
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 
@@ -19,120 +18,134 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 
-  <script type='text/javascript'>
-  (function (d, t) {
-    var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
-    bh.type = 'text/javascript';
-    bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=pde0nnfzf7hzbx3srhwuaw';
-    s.parentNode.insertBefore(bh, s);
-    })(document, 'script');
-  </script>
-
 </head>
 
-<body class="splash">
+<body>
 
-  <div id="PageContainer" class="splash-container">
-    <header class="site-header" role="banner">
+  <div class="splash" id="splash">
+
+    <div id="PageContainer" class="splash-container">
+      <header class="site-header" role="banner">
+        <div class="wrapper">
+
+          <div class="grid grid--middle">
+            <div class="grid__item one-half push--one-quarter text-center">
+              <img src="images/logo.svg" />
+            </div>
+            <div class="grid__item one-quarter text-right">
+              <div class="site-header-link animated fadeIn" onclick="closeSplash()">
+                <span>Visit Site</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <main class="wrapper main-content" role="main">
+
+        <div id="shopify-section-splash" class="shopify-section splash-inner">
+          <div class="splash-content large--one-half medium-down--one-whole animated fadeInUp">
+            <div>
+
+              <div class="splash-meta">
+                <span>Join Today</span>
+              </div>
+              <div class="splash-title">
+                <h1>Get Ready for More Joy!</h1>
+              </div>
+              <div class="splash-body">
+                <p>We’re about to launch a new chapter in our mission to <i>Inspire the World to Choose Joy!</i> Join our email list and be the first to know what’s coming up next for KonMari...</p>
+              </div>
+              <div class="splash-form">
+
+                <!-- Begin MailChimp Signup Form -->
+                <form action="https://konmari.us12.list-manage.com/subscribe/post?u=a2a13a532930db09d4caa9b2f&amp;id=5d94752aa8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+                	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter email">
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a2a13a532930db09d4caa9b2f_5d94752aa8" tabindex="-1" value=""></div>
+                  <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+
+                </form>
+
+              </div>
+            </div>
+
+
+            <div class="splash-image large--one-half medium-down--one-whole animated fadeInUp">
+              <div>
+                <img src="images/MKSADLER-5609-800.jpg" />
+              </div>
+            </div>
+          </div>
+
+      </main>
+
+      <div class="splash-bg animated fadeIn delay">
+        <img src="images/splash-bg.svg" />
+      </div>
+    </div>
+
+    <div class="invader" id="invader">
+
       <div class="wrapper">
 
-        <div class="grid grid--middle">
-          <div class="grid__item one-half push--one-quarter text-center">
-            <img src="images/logo.svg" />
+        <button class="invader-close" onclick="removeClass()">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 357 357" style="enable-background:new 0 0 357 357;" xml:space="preserve">
+          	<polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"/>
+          </svg>
+        </button>
+
+        <div class="invader-container">
+          <div class="invader-meta">
+            <span>Join Today</span>
           </div>
-          <div class="grid__item one-quarter text-right">
-            <div class="site-header-link animated fadeIn">
-              <a href="">Visit Site</a>
-            </div>
+          <div class="invader-title">
+            <h1>We're on the brink of something joyful...</h1>
           </div>
-        </div>
-
-      </div>
-    </header>
-
-    <main class="wrapper main-content" role="main">
-
-      <div id="shopify-section-splash" class="shopify-section splash-inner">
-        <div class="splash-content large--one-half medium-down--one-whole animated fadeInUp">
-          <div>
-
-            <div class="splash-meta">
-              <span>Join Today</span>
-            </div>
-            <div class="splash-title">
-              <h1>Get Ready for More Joy!</h1>
-            </div>
-            <div class="splash-body">
-              <p>We’re about to launch a new chapter in our mission to <i>Inspire the World to Choose Joy!</i> Join our email list and be the first to know what’s coming up next for KonMari...</p>
-            </div>
-            <div class="splash-form">
-
-              <!-- Begin MailChimp Signup Form -->
-              <form action="https://konmari.us12.list-manage.com/subscribe/post?u=a2a13a532930db09d4caa9b2f&amp;id=5d94752aa8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-
-              	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter email">
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a2a13a532930db09d4caa9b2f_5d94752aa8" tabindex="-1" value=""></div>
-                <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-
-              </form>
-
-            </div>
+          <div class="invader-body">
+            <p>Be the first to find out what. Sign up to get on our waitlist for new products, classes & consultants.</p>
           </div>
 
+          <div class="invader-form">
+            <!-- Begin MailChimp Signup Form -->
+            <form action="https://konmari.us12.list-manage.com/subscribe/post?u=a2a13a532930db09d4caa9b2f&amp;id=5d94752aa8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
-          <div class="splash-image large--one-half medium-down--one-whole animated fadeInUp">
-            <div>
-              <img src="images/MKSADLER-5609-800.jpg" />
-            </div>
+              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter email">
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a2a13a532930db09d4caa9b2f_5d94752aa8" tabindex="-1" value=""></div>
+              <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+
+            </form>
           </div>
         </div>
 
-    </main>
-
-    <div class="splash-bg animated fadeIn delay">
-      <img src="images/splash-bg.svg" />
-    </div>
-  </div>
-
-  <div class="invader">
-
-    <div class="wrapper">
-
-      <button class="invader-close" onclick="close()">
-        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 357 357" style="enable-background:new 0 0 357 357;" xml:space="preserve">
-        	<polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"/>
-        </svg>
-      </button>
-
-      <div class="invader-container">
-        <div class="invader-meta">
-          <span>Join Today</span>
-        </div>
-        <div class="invader-title">
-          <h1>We're on the brink of something joyful...</h1>
-        </div>
-        <div class="invader-body">
-          <p>Be the first to find out what. Sign up to get on our waitlist for new products, classes & consultants.</p>
-        </div>
-
-        <div class="invader-form">
-          <!-- Begin MailChimp Signup Form -->
-          <form action="https://konmari.us12.list-manage.com/subscribe/post?u=a2a13a532930db09d4caa9b2f&amp;id=5d94752aa8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-
-            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter email">
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a2a13a532930db09d4caa9b2f_5d94752aa8" tabindex="-1" value=""></div>
-            <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-
-          </form>
-        </div>
       </div>
 
     </div>
 
   </div>
 
-  <script src="js/scripts.js"></script>
+  <script type="text/javascript">
+
+    setTimeout(function(){
+      var element = document.getElementById("invader");
+      element.classList.add("invader--open");
+    }, 2000);
+
+    function removeClass() {
+      var element = document.getElementById("invader");
+      element.classList.remove("invader--open");
+    }
+
+    function closeSplash() {
+      var element = document.getElementById("splash");
+      element.classList.add("splash--closed");
+    }
+
+
+  </script>
+
 </body>
 </html>

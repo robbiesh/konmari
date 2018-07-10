@@ -47,19 +47,124 @@
 }
 
 
-body {
-  font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
 }
 
-a {
-  text-decoration: none;
-  color: #747474;
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
 
 // splash
 
 .splash {
+  font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  overflow-y: scroll;
+  width: 100%;
+  z-index: 50;
+  transition: all 0.3s;
+  opacity: 1;
+  padding-right: 17px;
+  box-sizing: initial;
+
+  a {
+    text-decoration: none;
+    color: #747474;
+  }
 
   header {
     z-index: 15;
@@ -73,6 +178,10 @@ a {
   .splash-container {
     background-color: #faf5ea;
     position: relative;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
     // overflow: hidden;
 
     @include media-query($large) {
@@ -330,9 +439,10 @@ a {
     color: #4a4a4a;
     text-transform: uppercase;
 
-    a {
+    span {
       position: relative;
       transition: 0.3s all;
+      cursor: pointer;
 
       &:after {
         content: "";
@@ -406,6 +516,14 @@ a {
   background: none;
   cursor: pointer;
   outline: none;
+  width: 13px;
+  height: 14px;
+  display: block;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+
 
   @include media-query($medium-down) {
     top: -15px;
@@ -415,4 +533,9 @@ a {
 
 .delay {
   animation-delay: 1s !important;
+}
+
+.splash--closed {
+  opacity: 0;
+  z-index: -10000000;
 }

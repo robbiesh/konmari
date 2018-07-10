@@ -8,7 +8,7 @@ var sassConfig = {
 	inputDirectory: 'sass/*.scss',
 	outputDirectory: 'css',
 	options: {
-		outputStyle: 'expanded'
+		outputStyle: 'compressed'
 	}
 }
 
